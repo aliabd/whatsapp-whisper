@@ -1,2 +1,4 @@
 gradio_client
-base64
+flask
+twilio
+pyngrok==4.1.1
