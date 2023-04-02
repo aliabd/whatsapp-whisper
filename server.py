@@ -32,7 +32,6 @@ def hello_world():
 @app.route('/bot-status', methods=['POST'])
 def bot_status():
     incoming_msg = request.values.get('Body', '')
-    print(incoming_msg)
     resp = MessagingResponse()
     msg = resp.message()
     msg.body('working fine beep boop')
@@ -52,7 +51,6 @@ def bot_receiver():
         print(path_to_audio)
         transcript = transcribe(path_to_audio)
         print(transcript)
-        # msg.body(transcript)
 
         if not transcript:
             raise Exception("No transcript found")
